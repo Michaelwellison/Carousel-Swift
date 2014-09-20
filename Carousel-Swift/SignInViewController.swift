@@ -38,7 +38,21 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         var emailFieldInput = String(emailTextField.text)
         var passwordFieldInput = String(passwordTextField.text)
         
-        if emailFieldInput == "m@me.com" && passwordFieldInput == "p" {
+        if emailFieldInput == "" {
+            
+            
+            var signingInView = UIAlertController(title: "Signing in...", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(signingInView, animated: true, completion: nil)
+            
+            delay(2.0, closure: {
+            
+                var noEmailErrorView = UIAlertController(title: "Missing email and password", message: "Please enter email and password.", preferredStyle: UIAlertControllerStyle.Alert)
+                noEmailErrorView.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.dismissViewControllerAnimated(true, completion: nil)
+                self.presentViewController(noEmailErrorView, animated: true, completion: nil)
+            })
+            
+        } else if emailFieldInput == "m@me.com" && passwordFieldInput == "p" {
             
             var signingInView = UIAlertController(title: "Signing in...", message: "", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(signingInView, animated: true, completion: nil)
