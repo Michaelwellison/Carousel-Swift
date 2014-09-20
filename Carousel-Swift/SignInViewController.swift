@@ -11,8 +11,9 @@ import UIKit
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
-
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginFormView: UIView!
+    @IBOutlet weak var loginTextImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,22 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     // MARK: Text Field Delegate
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        
+        UIView.animateWithDuration(0.5, animations: {
+            self.loginFormView.frame = CGRectMake(0, 80, 320, 119)
+            
+            self.loginTextImage.hidden = true
+        })
+        
+        return true
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        
+        UIView.animateWithDuration(0.5, animations: {
+            self.loginFormView.frame = CGRectMake(0, 159, 320, 119)
+            self.loginTextImage.hidden = false
+        })
         
         return true
     }
