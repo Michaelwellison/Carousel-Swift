@@ -31,27 +31,40 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Configuration
+    // MARK: Custom Functions
     
-    func userEmailAndPasswordCheck() {
+    func startUserEmailAndPasswordCheck() {
         
         var emailFieldInput = String(emailTextField.text)
         var passwordFieldInput = String(passwordTextField.text)
         
-        if emailFieldInput == "michaelwellison@gmail.com" && passwordFieldInput == "password" {
+        if emailFieldInput == "m@me.com" && passwordFieldInput == "p" {
             
-            self.performSegueWithIdentifier("signIn", sender: self)
-            println("Success!")
+            var signingInView = UIAlertController(title: "Signing in...", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(signingInView, animated: true, completion: nil)
+            
+            delay(2.0, closure: {
+                self.dismissViewControllerAnimated(true, completion: nil)
+                self.performSegueWithIdentifier("signIn", sender: self)
+            })
             
         } else {
             
             var errorView = UIAlertController(title: "Incorrect Password", message: "The password or username you entered is incorrect. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
             errorView.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(errorView, animated: true, completion: nil)
-            
-            println("Error")
         }
     }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
     
     // MARK: Text Field Delegate
     
@@ -82,6 +95,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
+    
+    @IBAction func onTapSignInButton(sender: UIButton) {
+        startUserEmailAndPasswordCheck()
+    }
+    
 
     // MARK: Navigation
     
