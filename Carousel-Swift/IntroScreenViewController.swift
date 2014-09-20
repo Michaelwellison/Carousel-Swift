@@ -10,6 +10,7 @@ import UIKit
 
 class IntroScreenViewController: UIViewController, UIScrollViewDelegate {
 
+    // MARK: Outlets
    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var introScreenImage: UIImageView!
@@ -22,12 +23,33 @@ class IntroScreenViewController: UIViewController, UIScrollViewDelegate {
             configureScrollView()
     }
     
+    // MARK: Configuration
+    
     func configureScrollView() {
         scrollView.contentSize = introScreenImage.frame.size
         scrollView.frame.size = view.frame.size
         
         scrollView.delegate = self
     }
+    
+    // MARK: Scroll View Delegate
+    
+    func scrollViewDidScrollToTop(scrollView: UIScrollView) {
+        println("Scrolled to top")
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        println("Scroll View Will Begin Dragging")
+    }
+    
+    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        println("Scroll View will end dragging")
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        println("Scroll View Did Scroll")
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
