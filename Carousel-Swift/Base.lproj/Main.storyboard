@@ -143,6 +143,7 @@
                         <outlet property="loginFormView" destination="ceS-Zc-yVu" id="qux-2n-0qI"/>
                         <outlet property="loginTextImage" destination="J1x-i1-Yw3" id="oaC-Sw-8gs"/>
                         <outlet property="passwordTextField" destination="jdq-7X-Klx" id="aGL-Dz-nyk"/>
+                        <segue destination="akM-GK-Nza" kind="modal" identifier="signIn" id="srg-AU-eLg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSi-rZ-CzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,6 +154,40 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1189" y="78"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a5j-JT-eKI">
+            <objects>
+                <viewController id="akM-GK-Nza" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="auk-a1-LTk">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome1" id="Eoq-hN-BYR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome2" id="FBD-KB-ePO">
+                                <rect key="frame" x="320" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome3" id="Dcs-PN-5Yl">
+                                <rect key="frame" x="960" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome3" id="Icz-UC-u4X">
+                                <rect key="frame" x="640" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1280" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98y-i6-37r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2292" y="788"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zeY-n2-Vzf">
@@ -185,6 +220,9 @@
         <image name="login_text" width="320" height="70"/>
         <image name="sign_in_buttons" width="320" height="104"/>
         <image name="sign_in_nav_bar" width="320" height="66"/>
+        <image name="welcome1" width="320" height="568"/>
+        <image name="welcome2" width="320" height="568"/>
+        <image name="welcome3" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
