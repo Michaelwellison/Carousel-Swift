@@ -50,6 +50,13 @@ class IntroScreenViewController: UIViewController, UIScrollViewDelegate {
         println("Scroll View Did Scroll")
     }
     
+    // MARK: Actions
+    
+    @IBAction func onTapCreateButton(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("createAccount", sender: self)
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
