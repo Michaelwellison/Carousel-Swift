@@ -48,6 +48,8 @@ class IntroScreenViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         println("Scroll View Did Scroll")
+        
+        println(scrollView.contentOffset)
     }
     
     // MARK: Actions
