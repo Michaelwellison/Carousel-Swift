@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  SettingsViewController.swift
 //  Carousel-Swift
 //
 //  Created by Michael Ellison on 9/23/14.
@@ -8,26 +8,29 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
-
+class SettingsViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var feedImageView: UIImageView!
+    @IBOutlet weak var settingsImageView: UIImageView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureScrollView()
         
-        navigationController?.navigationBarHidden = true
     }
 
-
-    func configureScrollView() {
-        scrollView.contentSize = feedImageView.frame.size
+    func configureScrollView(){
+        scrollView.contentSize = settingsImageView.frame.size
         scrollView.frame.size = view.frame.size
         scrollView.contentInset.bottom = 65
         
     }
+
+    @IBAction func onDismissButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

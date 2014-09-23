@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  ConversationsViewController.swift
 //  Carousel-Swift
 //
 //  Created by Michael Ellison on 9/23/14.
@@ -8,26 +8,24 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class ConversationsViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var feedImageView: UIImageView!
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureScrollView()
-        
-        navigationController?.navigationBarHidden = true
+
+        // Do any additional setup after loading the view.
     }
 
-
-    func configureScrollView() {
-        scrollView.contentSize = feedImageView.frame.size
-        scrollView.frame.size = view.frame.size
-        scrollView.contentInset.bottom = 65
-        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func onBackButton(sender: UIButton) {
+        
+        navigationController?.popViewControllerAnimated(true)
+    }
+
     /*
     // MARK: - Navigation
 
