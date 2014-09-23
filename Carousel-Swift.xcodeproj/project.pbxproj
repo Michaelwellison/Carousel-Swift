@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		D55DC8EE19CD25DE008FF3D1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DC8ED19CD25DE008FF3D1 /* SignInViewController.swift */; };
 		D58D229219CBFB7A00F7F5D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58D229119CBFB7A00F7F5D7 /* AppDelegate.swift */; };
-		D58D229419CBFB7A00F7F5D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58D229319CBFB7A00F7F5D7 /* ViewController.swift */; };
 		D58D229719CBFB7A00F7F5D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58D229519CBFB7A00F7F5D7 /* Main.storyboard */; };
 		D58D229919CBFB7A00F7F5D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58D229819CBFB7A00F7F5D7 /* Images.xcassets */; };
 		D58D22A819CBFB7A00F7F5D7 /* Carousel_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58D22A719CBFB7A00F7F5D7 /* Carousel_SwiftTests.swift */; };
 		D58D22B219CD139200F7F5D7 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58D22B119CD139200F7F5D7 /* IntroScreenViewController.swift */; };
 		D5BA20C719D0A66300D66509 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA20C619D0A66300D66509 /* CreateAccountViewController.swift */; };
+		D5FBDB1419D0FF15006488EC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBDB1319D0FF15006488EC /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,6 @@
 		D58D228C19CBFB7A00F7F5D7 /* Carousel-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carousel-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58D229019CBFB7A00F7F5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D58D229119CBFB7A00F7F5D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D58D229319CBFB7A00F7F5D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D58D229619CBFB7A00F7F5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D58D229819CBFB7A00F7F5D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D58D22A119CBFB7A00F7F5D7 /* Carousel-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Carousel-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +39,7 @@
 		D58D22A719CBFB7A00F7F5D7 /* Carousel_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel_SwiftTests.swift; sourceTree = "<group>"; };
 		D58D22B119CD139200F7F5D7 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
 		D5BA20C619D0A66300D66509 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		D5FBDB1319D0FF15006488EC /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ../WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				D58D229119CBFB7A00F7F5D7 /* AppDelegate.swift */,
-				D58D229319CBFB7A00F7F5D7 /* ViewController.swift */,
 				D58D229519CBFB7A00F7F5D7 /* Main.storyboard */,
-				D5BA20C619D0A66300D66509 /* CreateAccountViewController.swift */,
 				D55DC8ED19CD25DE008FF3D1 /* SignInViewController.swift */,
+				D5FBDB1319D0FF15006488EC /* WelcomeViewController.swift */,
+				D5BA20C619D0A66300D66509 /* CreateAccountViewController.swift */,
 				D58D22B119CD139200F7F5D7 /* IntroScreenViewController.swift */,
 				D58D229819CBFB7A00F7F5D7 /* Images.xcassets */,
 				D58D228F19CBFB7A00F7F5D7 /* Supporting Files */,
@@ -218,8 +218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BA20C719D0A66300D66509 /* CreateAccountViewController.swift in Sources */,
+				D5FBDB1419D0FF15006488EC /* WelcomeViewController.swift in Sources */,
 				D55DC8EE19CD25DE008FF3D1 /* SignInViewController.swift in Sources */,
-				D58D229419CBFB7A00F7F5D7 /* ViewController.swift in Sources */,
 				D58D229219CBFB7A00F7F5D7 /* AppDelegate.swift in Sources */,
 				D58D22B219CD139200F7F5D7 /* IntroScreenViewController.swift in Sources */,
 			);
