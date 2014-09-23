@@ -30,7 +30,6 @@ class WelcomeViewController: UIViewController {
     func configureScrollView() {
         scrollView.contentSize = CGSize(width: 1280, height: 568)
         scrollView.frame.size = view.frame.size
-        
     }
     
     override func didReceiveMemoryWarning() {
