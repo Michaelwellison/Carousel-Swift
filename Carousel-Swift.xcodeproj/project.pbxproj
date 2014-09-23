@@ -13,6 +13,7 @@
 		D58D229919CBFB7A00F7F5D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58D229819CBFB7A00F7F5D7 /* Images.xcassets */; };
 		D58D22A819CBFB7A00F7F5D7 /* Carousel_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58D22A719CBFB7A00F7F5D7 /* Carousel_SwiftTests.swift */; };
 		D58D22B219CD139200F7F5D7 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58D22B119CD139200F7F5D7 /* IntroScreenViewController.swift */; };
+		D5AD5CF419D230180070266D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD5CF319D230180070266D /* FeedViewController.swift */; };
 		D5BA20C719D0A66300D66509 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA20C619D0A66300D66509 /* CreateAccountViewController.swift */; };
 		D5FBDB1419D0FF15006488EC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBDB1319D0FF15006488EC /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		D58D22A619CBFB7A00F7F5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D58D22A719CBFB7A00F7F5D7 /* Carousel_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel_SwiftTests.swift; sourceTree = "<group>"; };
 		D58D22B119CD139200F7F5D7 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
+		D5AD5CF319D230180070266D /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		D5BA20C619D0A66300D66509 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		D5FBDB1319D0FF15006488EC /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ../WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 			children = (
 				D58D229119CBFB7A00F7F5D7 /* AppDelegate.swift */,
 				D58D229519CBFB7A00F7F5D7 /* Main.storyboard */,
+				D5AD5CF319D230180070266D /* FeedViewController.swift */,
 				D55DC8ED19CD25DE008FF3D1 /* SignInViewController.swift */,
 				D5FBDB1319D0FF15006488EC /* WelcomeViewController.swift */,
 				D5BA20C619D0A66300D66509 /* CreateAccountViewController.swift */,
@@ -221,6 +224,7 @@
 				D5FBDB1419D0FF15006488EC /* WelcomeViewController.swift in Sources */,
 				D55DC8EE19CD25DE008FF3D1 /* SignInViewController.swift in Sources */,
 				D58D229219CBFB7A00F7F5D7 /* AppDelegate.swift in Sources */,
+				D5AD5CF419D230180070266D /* FeedViewController.swift in Sources */,
 				D58D22B219CD139200F7F5D7 /* IntroScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
