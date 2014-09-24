@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController, UITextFieldDelegate {
+class SignInViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
     
     // MARK: Outlets
     
@@ -16,6 +16,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginFormView: UIView!
     @IBOutlet weak var loginTextImage: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     // MARK: View Lifecycle
     
@@ -24,6 +26,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        scrollView.delegate = self
+        scrollView.contentSize = CGSize(width: 320, height: 578)
+        scrollView.contentInset.bottom = 10
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,6 +96,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         })
         
         return true
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        println("scroll view did scroll")
+        
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {

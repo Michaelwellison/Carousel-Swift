@@ -14,6 +14,12 @@ class IntroScreenViewController: UIViewController, UIScrollViewDelegate {
    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var introScreenImage: UIImageView!
+    @IBOutlet weak var tile1Image: UIImageView!
+    @IBOutlet weak var tile2Image: UIImageView!
+    @IBOutlet weak var tile3Image: UIImageView!
+    @IBOutlet weak var tile4Image: UIImageView!
+    @IBOutlet weak var tile5Image: UIImageView!
+    @IBOutlet weak var tile6Image: UIImageView!
     
     
     override func viewDidLoad() {
