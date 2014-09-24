@@ -17,6 +17,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
     @IBOutlet weak var loginFormView: UIView!
     @IBOutlet weak var loginTextImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signInView: UIImageView!
     
     
     // MARK: View Lifecycle
@@ -99,14 +101,32 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         
+        
+        
+        return true
+    }
+    
+    @IBAction func beginEditingEmailTextField(sender: AnyObject) {
         UIView.animateWithDuration(0.5, animations: {
             self.loginFormView.frame = CGRectMake(0, 80, 320, 119)
+            self.signInButton.frame = CGRectMake(16, 212, self.signInButton.frame.width, self.signInView.frame.height)
+            self.signInView.frame = CGRectMake(0, 200, self.signInView.frame.width, self.signInView.frame.height)
             
             self.loginTextImage.hidden = true
         })
         
-        return true
     }
+    
+    @IBAction func beginEditingPasswordTextField(sender: AnyObject) {
+        UIView.animateWithDuration(0.5, animations: {
+            self.loginFormView.frame = CGRectMake(0, 159, 320, 119)
+            self.signInButton.frame = CGRectMake(16, 476, self.signInButton.frame.width, self.signInView.frame.height)
+            self.signInView.frame = CGRectMake(0, 464, self.signInView.frame.width, self.signInView.frame.height)
+            self.loginTextImage.hidden = false
+        })
+    }
+    
+    
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         println("scroll view did scroll")
@@ -119,6 +139,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
         
         UIView.animateWithDuration(0.5, animations: {
             self.loginFormView.frame = CGRectMake(0, 159, 320, 119)
+            self.signInButton.frame = CGRectMake(16, 476, self.signInButton.frame.width, self.signInView.frame.height)
+            self.signInView.frame = CGRectMake(0, 464, self.signInView.frame.width, self.signInView.frame.height)
             self.loginTextImage.hidden = false
         })
         

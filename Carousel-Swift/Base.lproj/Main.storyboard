@@ -234,12 +234,18 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="beginEditingPasswordTextField:" destination="BBi-ql-ttA" eventType="editingDidBegin" id="Vyd-Fl-3T1"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="pp6-dz-ipo">
                                                 <rect key="frame" x="16" y="23" width="288" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="beginEditingEmailTextField:" destination="BBi-ql-ttA" eventType="editingDidBegin" id="Iqx-Zk-9sg"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -282,6 +288,8 @@
                         <outlet property="loginTextImage" destination="J1x-i1-Yw3" id="oaC-Sw-8gs"/>
                         <outlet property="passwordTextField" destination="jdq-7X-Klx" id="aGL-Dz-nyk"/>
                         <outlet property="scrollView" destination="PUQ-Xg-0HJ" id="VKY-6a-7d8"/>
+                        <outlet property="signInButton" destination="lxj-mT-2SW" id="uzZ-WQ-m5m"/>
+                        <outlet property="signInView" destination="bS3-TH-VeK" id="jrc-AD-Wxb"/>
                         <segue destination="akM-GK-Nza" kind="modal" identifier="signIn" id="srg-AU-eLg"/>
                     </connections>
                 </viewController>
@@ -596,6 +604,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="n4O-R6-v9r"/>
-        <segue reference="pgc-7O-3i9"/>
+        <segue reference="srg-AU-eLg"/>
     </inferredMetricsTieBreakers>
 </document>
