@@ -27,9 +27,19 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
         emailTextField.delegate = self
         passwordTextField.delegate = self
         scrollView.delegate = self
-        scrollView.contentSize = CGSize(width: 320, height: 578)
-        scrollView.contentInset.bottom = 10
-
+        scrollView.contentSize = CGSize(width: 320, height: 568)
+        scrollView.contentOffset.y = 20
+        scrollView.alpha = 0
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        UIView.animateWithDuration(2.0, animations: {
+            self.scrollView.alpha = 1
+            self.view.transform = CGAffineTransformMakeScale(2, 2)
+            self.view.transform = CGAffineTransformMakeScale(1, 1)
+            
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -126,6 +136,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
         startUserEmailAndPasswordCheck()
     }
     
+    @IBAction func onBackButton(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
 
     // MARK: Navigation
     
